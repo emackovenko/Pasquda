@@ -1,0 +1,8 @@
+[submodule "backend"]
+	path = backend
+	url = git@github.com:emackovenko/pasquda-backend.git
+	branch = master
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:emackovenko/pasquda-frontend.git
+	branch = master

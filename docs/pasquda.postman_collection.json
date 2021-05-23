@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "843a7c29-3b98-462a-96b1-f666380768d0",
+		"name": "pasquda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rbac",
+			"item": [
+				{
+					"name": "Авторизация",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"emackovenko@gmail.com\",\r\n    \"password\": \"trustno1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/rbac/auth/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rbac",
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Создание пользователя",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNjI0MDgxNDQ1fQ.8uqcR27V5LzGVXiQcAvJ_hEEQ1F3F9MhQI4N9qtL-e4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rgaleeva@mailru\",\r\n    \"username\": \"galeeva\",\r\n    \"last_name\": \"Галеева\",\r\n    \"first_name\": \"Рената\",\r\n    \"middle_name\": \"Римовна\",\r\n    \"password\": \"trustno1\",\r\n    \"telegram\": \"RenataGall\",\r\n    \"phone\": \"+79876126355\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/rbac/registration/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rbac",
+								"registration",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
